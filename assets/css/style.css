@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #dcf1f2;
+}
+
+/* Changed HTML semantic to header */
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #011b29;
+    color: #ffffff;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/* Changed 'seo' class selector  to id selector */
+header h1 #seo {
+    color: #d9dcd6;
+}
+
+/* Changed HTML semantic to nav for links on the header */
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+header nav a {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section h1 {
+    padding: 20px 10px 0 50px;
+    border-right-style: solid;
+    clear: both;
+    float: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #043452;
+}
