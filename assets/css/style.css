@@ -1,7 +1,7 @@
 :root {
-    --dark: #13293d;
-    --light: #fff;
-    --navlink-color: #b9c6ae;
+    --dark: #383d47;
+    --light: #a6cdd5;
+    --bgcolor: #eff1f8;
     --main_font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -15,13 +15,14 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.3;
+    background-color: var(--bgcolor);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 0;
+    padding: 1% 5% 1% 0;
     font-family: var( --main_font);
     background-color: var(--dark);
     color: var(--light);
@@ -29,31 +30,34 @@ header {
 
 h1 {
     font-size: 400%;
-    padding: 10px 10px 10px 100px;
-    background-color: var(--navlink-color);
+    padding: 1px 10px 1px 100px;
+    background-color: var(--light);
     color: var(--dark);
 }
 
 h2 {
     font-size: 300%;
     text-align: right;
-
+    color: var(--dark);
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
-    min-width: 300px;
-    
+}
+
+a {
+    text-decoration: none;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+    border-bottom: solid;
 }
 
 nav a {
     background-color: unset;
-    color: var(--navlink-color);
+    color: var(--light);
     margin-left: 30px;
-    font-size: 150%;
-    font-weight: bold;
-    text-decoration: none;
 }
 
 nav a:hover {
@@ -90,21 +94,33 @@ aside {
 
 article {
     flex: 4;
-    background-color: #fff;
     padding: 20px;
 }
 
 article p {
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 
 @media screen and (max-width: 992px) {
 
+    header {
+        padding: 0 0 1% 0;
+    }
+
     header,
     section {
         flex-direction: column;
-        /* align-items: center; */
+    }
+
+    header h1, section aside h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    aside {
+        border-right: none;
+        border-bottom: solid;
     }
 
     main {
