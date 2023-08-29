@@ -18,6 +18,7 @@ body {
     font-family: var(--main_font);
 }
 
+/* Set flex on header for the h1 and nav links */
 header {
     display: flex;
     background-color: var(--dark);
@@ -37,20 +38,23 @@ header h1 {
 header a {
     box-shadow: inset 0 0 0 0 var(--light);
     color: var(--light);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
 
 }
 
-/* Change color on hover*/
+/* Change box color of nav links on hover*/
 header a:hover {
     box-shadow: inset 0 -100px 0 0 var(--light);
     color: var(--dark);
     border-bottom: solid var(--light);
 }
 
+a {
+    text-decoration: none;
+}
 
 nav ul a {
-    text-decoration: none;
+    
     font-size: 150%;
     font-weight: bold;
     margin-left: 20px;
@@ -64,15 +68,16 @@ section a {
     color: var(--dark);
 }
 
+/* Set profile image */
 #profile-pic {
-    height: 200px;
+    height: 400px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/toilet-paper.jpg");
-    background-size: cover;
+    background-image: url("../images/profile-pic.jpg");
+    background-size: 100%;
     background-position: center;
 }
-
+/* Set flex on the section that consists of aside and articles */
 section {
     display: flex;
     flex-flow: row;
@@ -101,52 +106,63 @@ article {
     font-size: 120%;
 }
 
+/* Set flex on work section for project lists */
 #work ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#work figure {
+img {
+    display: none;
+}
+
+/* Set project objects with box size and color with box shadow transition */
+#work .project-obj {
     width: 48%;
     margin: 1%;
     border: 5px solid var(--light);
     background-size: cover;
     background-position: center;
+    box-shadow: inset 0 0 100px 0 var(--light);
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
 }
 
-img {
-    display: none;
+/* Turn off box shadow on hover with transition*/
+#work .project-obj:hover {
+    box-shadow: inset 0 0 0 0 var(--light);
+    border-bottom: solid var(--light);
 }
 
-#work figure:hover {
-    opacity: 0.5;
-}
-
-#work figcaption {
+/* Add style on project title and description */
+#work .project-desc {
     padding: 2%;
-    margin: 10% 70% 10% 0;
+    margin: 10% 60% 10% 0;
     background-color: var(--light);
+    align-items: center;
 }
 
-#work figure:nth-of-type(1) {
+/* Set background image of first project object and make size bigger */
+#work .project-obj:nth-of-type(1) {
     width: 100%;
-    background-image: url("../images/tablet.jpg");
+    height: 400px;
+    background-image: url("../images/webapp.png");
 }
 
-#work figure:nth-of-type(2) {
-    background-image: url("../images/camera.jpg");
+/* Set background image for other projects */
+#work .project-obj:nth-of-type(2) {
+    background-image: url("../images/css-cheatsheet.png");
 }
 
-#work figure:nth-of-type(3) {
+#work .project-obj:nth-of-type(3) {
     background-image: url("../images/wooden-spoons.jpg");
 }
 
-#work figure:nth-of-type(4) {
+#work .project-obj:nth-of-type(4) {
     background-image: url("../images/tablet.jpg");
 }
 
-#work figure:nth-of-type(5) {
+#work .project-obj:nth-of-type(5) {
     background-image: url("../images/toilet-paper.jpg");
 }
 
@@ -157,11 +173,11 @@ img {
     padding: 2%;
 }
 
-
+/* Set box shadow transition for contact info */
 #contact-me  a {
     box-shadow: inset 0 0 0 0 var(--dark);
     color: var(--dark);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
 
 }
 
@@ -171,7 +187,9 @@ img {
     border-bottom: solid var(--dark);
 }
 
-/* Media query at 992 screen width */
+
+
+/* Media query at 992 screen width for responsive design*/
 @media screen and (max-width: 992px) {
 
     header,
@@ -200,9 +218,13 @@ img {
         padding: 2%;
     }
 
-    #work figure {
+    #work .project-obj {
         width: 100%;
         flex-direction: column;
+    }
+
+    #work .project-obj:nth-of-type(1){
+        height: unset;
     }
 
     #contact-me li {
