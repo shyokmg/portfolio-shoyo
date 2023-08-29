@@ -1,10 +1,10 @@
-# portfolio-shoyo
+# Shoyo's Portfolio project
 
 ## Description
 
-This Website is my personal portfolio that consits of some information about me and a list of projects that I have made and contributed to
+This Website is my personal portfolio that consists of some information about me and a list of projects that I have made and contributed to.
 
-## Web image
+## My Portfolio website
 ![My Portfolio](./assets/images/my-portfolio.png)
 
 ## Credits
