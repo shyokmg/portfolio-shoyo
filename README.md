@@ -5,7 +5,7 @@
 This Website is my personal portfolio that consits of some information about me and a list of projects that I have made and contributed to
 
 ## Web image
-![My Portfolio](./assets/images/my-portfolio)
+![My Portfolio](./assets/images/my-portfolio.png)
 
 ## Credits
 
