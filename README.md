@@ -7,6 +7,9 @@ This Website is my personal portfolio that consists of some information about me
 ## My Portfolio website
 ![My Portfolio](./assets/images/my-portfolio.png)
 
+## Link to website
+https://shyokmg.github.io/portfolio-shoyo/
+
 ## Credits
 
 Info and tutorial regarding HTML Semantics are from https://www.w3schools.com/html/html5_semantic_elements.asp
